@@ -1,16 +1,77 @@
-# React + Vite
+# Popup Modal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive popup modal built with **React** and **Tailwind CSS**. Clicking the "Create" button opens a sign-up form inside a modal overlay with a blurred background effect.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwindcss)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Modal Overlay** — Opens on button click with a semi-transparent backdrop
+- **Background Blur** — Content behind the modal is blurred for focus
+- **Click Outside to Close** — Clicking the overlay dismisses the modal
+- **Close Button** — Dedicated "X" button to close the modal
+- **Sign-Up Form** — Includes Full Name and Password fields
+- **Fully Responsive** — Works on all screen sizes
+- **Smooth Transitions** — CSS transitions for a polished feel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|---|---|
+| React 19 | UI library |
+| Tailwind CSS 4 | Utility-first styling |
+| Vite 7 | Build tool & dev server |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/parwez159/Popup-Modal.git
+
+# Navigate to the project
+cd Popup-Modal
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+## Project Structure
+
+```
+popup/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Modal.jsx        # Modal component with sign-up form
+│   ├── App.jsx               # Main app with modal toggle logic
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## How It Works
+
+1. The `App` component manages modal visibility via `useState`.
+2. Clicking **"Create"** sets `isActive` to `true`, rendering the `Modal` component.
+3. The background content gets a blur effect using Tailwind's `blur` utility.
+4. The modal can be closed by clicking the **X button** or clicking outside the modal.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
